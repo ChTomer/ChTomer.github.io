@@ -2,3 +2,27 @@ _site
 .sass-cache
 .jekyll-metadata
 Gemfile.lock
+
+# macOS
+.DS_Store
+
+# Jekyll build files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby / Bundler
+.bundle/
+vendor/
+Gemfile.lock
+
+# VSCode
+.vscode/
+
+# Environment variables / secrets
+.env
+.env.*
+
+# Logs
+*.log
