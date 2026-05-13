@@ -1,9 +1,9 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
+  - title: "My Blog Posts"
+    url: /my blog posts/
+  - title: "From LinkedIn"
+    url: /from linkedin/
+  # - title: "Tags"
+  #   url: /tags/
   - title: "About"
     url: /about/
