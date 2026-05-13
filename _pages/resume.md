@@ -4,14 +4,15 @@ permalink: /resume/
 layout: single
 ---
 
-# Experience
 
-## Data Analytics Bootcamp — NYC Data Science Academy
+### Experience
+
+#### Data Analytics Bootcamp — NYC Data Science Academy
 2024–2025
 
 Worked on machine learning, fraud detection, dashboards, and analytics projects using Python, SQL, R, and Tableau.
 
-# Skills
+### Skills
 
 - Python
 - SQL
@@ -20,10 +21,10 @@ Worked on machine learning, fraud detection, dashboards, and analytics projects 
 - Machine Learning
 - Data Visualization
 
-# Projects
+### Projects
 
 - Healthcare Fraud Detection
 - Broadway Revenue Analysis
 - Formula 1 Analytics
 
-[Download Resume](/assets/files/Tomer_Choresh_CV.pdf)
+[Download my full Resume](/assets/files/Tomer_Choresh_CV.pdf)

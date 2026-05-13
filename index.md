@@ -10,7 +10,7 @@ author_profile: true
 
 Hi, I'm Tomer.
 
-Data Analyst focused on analytics, fraud detection, and machine learning.
+I’m a Data Analyst based in Israel with a background in analytics, machine learning, and data visualization.
 
 Featured Projects:
 - Broadway Revenue Analysis
