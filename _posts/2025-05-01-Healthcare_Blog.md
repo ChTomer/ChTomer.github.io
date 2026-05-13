@@ -189,7 +189,7 @@ In summary, this table gives a short view of the three model performances:
 |---|---|---|---|---|---|---|
 | Baseline LR | 0.93 | 0.75 | 0.38 | 0.51 | 0.924 | Imbalance hurts recall |
 | GridSearch LR | 0.92 | 0.81 | 0.28 | 0.41 | 0.926 | No real lift |
-| <font color="red">**SMOTE + LR**</font> | <font color="red">0.90</font> | <font color="red">0.48</font> | <font color="red">0.86</font> | <font color="red">0.61</font> | <font color="red">0.961</font> | <font color="red">Best ROC-AUC</font> |
+| <font color="red"> **SMOTE + LR** </font> | <font color="red">0.90</font> | <font color="red">0.48</font> | <font color="red">0.86</font> | <font color="red">0.61</font> | <font color="red">0.961</font> | <font color="red">Best ROC-AUC</font> |
 
 ---
 

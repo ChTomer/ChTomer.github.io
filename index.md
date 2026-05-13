@@ -5,3 +5,12 @@
 layout: home
 author_profile: true
 ---
+
+Hi, I'm Tomer.
+
+Data Analyst focused on analytics, fraud detection, and machine learning.
+
+Featured Projects:
+- Broadway Revenue Analysis
+- Healthcare Fraud Detection
+- Formula 1 Analytics
