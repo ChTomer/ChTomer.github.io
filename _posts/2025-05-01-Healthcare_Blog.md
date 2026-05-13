@@ -10,7 +10,7 @@ read_time: true
 
 # Catching Fraud in the Healthcare System
 
-<img src="images/Healthcare fruad illustration.png" width="600">
+<img src="/assets/images/Healthcare fruad illustration.png" width="600">
 
 *Catching Healthcare Fraud: A Data-Science Walk-Through*
 
@@ -65,7 +65,7 @@ Before diving into the dataset, it's important to highlight a key point about my
 
 The label breakdown is _90.65% non-fraud vs 9.35% fraud_, matching the DOJ estimate.
 
-<img src="images/prop fraud.png" width="600">
+<img src="/assets/images/prop fraud.png" width="600">
 
 *Fraudulent providers 9.35%, non-fraud 90.65%.*
 
@@ -101,7 +101,7 @@ These were calculated separately for inpatient (IP) and outpatient (OP) data, wh
 
 The chart below compares the *average claim duration* for fraud vs non-fraud providers, split by IP and OP. In both IP and OP sets, fraudulent providers bill for noticeably longer sessions.
 
-<img src="images/avg dur tre double.png" width="600">
+<img src="/assets/images/avg dur tre double.png" width="600">
 
 *Average claim duration by fraud status (IP and OP).*
 
@@ -121,7 +121,7 @@ I began with baseline Logistic Regression (`scikit-learn` default). The accuracy
 - F1 Score: 0.51
 - AUC LR Model: [0.9239]
   
-<img src="images/LR 1.png" width="600">
+<img src="/assets/images/LR 1.png" width="600">
 
 *Confusion matrix and ROC curve for baseline Logistic Regression.*
 
@@ -132,6 +132,7 @@ I began with baseline Logistic Regression (`scikit-learn` default). The accuracy
 I ran a `GridSearchCV` over regularization strength (`C`), penalty type, and solver. The best combinations I found were:
 
 {'C': 0.01, 'penalty': 'l1', 'solver': 'liblinear'}
+
 | Metric | Take 1 (old) | Take 2 (new) |
 |---|---|---|
 | Accuracy | 0.93 | 0.92 (–0.01) |
@@ -142,7 +143,7 @@ I ran a `GridSearchCV` over regularization strength (`C`), penalty type, and sol
 
 I got better results for the Precision, but recall dropped by 0.10 points. As a result, 76 of 105 fraudulent providers still slip past from the true value. At this point, I noticed something odd: no matter what I tried, accuracy hovered around 90%. Then it struck me that the data were about 90% non-fraud. That’s why the model could predict 'clean' every time and still achieve a high accuracy score.
 
-<img src="images/GSCV2.png" width="600">
+<img src="/assets/images/GSCV2.png" width="600">
 
 *Confusion Matrix and ROC curve for Logistic Regression after hyper-parameter tuning with GridSearchCV.*
 
@@ -161,7 +162,7 @@ The SMOTE method generates synthetic data for the minority class until we get th
 | Non-fraud (0) | 3,923 | 3,923 |
 | Fraud (1) | 405 | 3,923 |
 
-<img src="images/smote_demo.gif" width="600">
+<img src="/assets/images/smote_demo.gif" width="600">
 
 --- 
 *Illustration of SMOTE on a graph.*
@@ -174,7 +175,7 @@ Running SMOTE with Logistic Regression gives me the following results:
 - <mark>F1 Score: 0.61</mark>
 - <mark>AUC with the SMOTE Model: [0.9611]</mark>
 
-<img src="images/SMOTE3.png" width="600">
+<img src="/assets/images/SMOTE3.png" width="600">
 
 *Confusion Matrix and ROC curve for Logistic Regression with SMOTE (best results).*
 

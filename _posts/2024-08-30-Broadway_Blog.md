@@ -10,7 +10,7 @@ read_time: true
 
 # Behind the Curtains: Insights into NYC Broadway Shows
 
-<img src="images/broadway_generated_image.jpg" width="600">
+<img src="/assets/images/broadway_generated_image.jpg" width="600">
 
 *Generated image of a Broadway theater by DALL-E.*
 
@@ -34,7 +34,7 @@ Gradually, I became more curious about Broadway. I began to distinguish between 
 
 Before I knew it, I was hunting for affordable tickets and trying to see as many shows as possible. I even started to recognize some famous actors' names who were appearing in various productions (even though I’m usually terrible with celebrity names). In short, I found myself increasingly drawn into the world of Broadway as a captivated spectator.
 
-<img src="images/example-theater.jpg" width="600">
+<img src="/assets/images/example-theater.jpg" width="600">
 
 *Broadway theater - view from the audience.*
 
@@ -86,11 +86,11 @@ The "Top 20 Shows" page offers a quick overview of the most successful Broadway 
 
 The "Compare" tab allows users to compare two shows across various parameters. This tab includes summaries for each selected show, and users can compare ticket prices and identify trends over months or years.
 
-<img src="images/compare-tab.png" width="600">
+<img src="/assets/images/compare-tab.png" width="600">
 
 *Compare shows tab.*
 
-<img src="images/violin-plot.png" width="600">
+<img src="/assets/images/violin-plot.png" width="600">
 
 *Violin plots to compare average ticket prices.*
 
@@ -100,7 +100,7 @@ The "Compare" tab allows users to compare two shows across various parameters. T
 
 The next tab provides a yearly heat-map of total income for each show, helping users identify more profitable periods. For example, the data shows that ticket prices tend to rise significantly during the end-of-year holiday season and early January due to high demand. In contrast, ticket prices often drop by 40-60% towards the end of January and early February, likely because of lower demand after the holidays.
 
-<img src="images/heat-map.png" width="600">
+<img src="/assets/images/heat-map.png" width="600">
 
 *Heat-map revenue tab.*
 
@@ -112,7 +112,7 @@ The "Theaters" tab summarizes decades of profits, the number of performances eac
 
 This tab also features two "sub-tabs." The first allows users to select a theater by name from among the 62 listed and discover which shows have been staged there. The second enables users to see when and where specific shows have been performed, making it interesting to compare the success of different shows over time.
 
-<img src="images/threater-by-show.png" width="600">
+<img src="/assets/images/threater-by-show.png" width="600">
 
 *Theaters by show tab.*
 
