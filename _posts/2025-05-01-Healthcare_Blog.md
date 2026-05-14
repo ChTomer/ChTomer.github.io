@@ -6,18 +6,23 @@ categories: [projects]
 tags: [python, data-analysis, visualization, Machine Learning, Data Science]
 author_profile: true
 read_time: true
+
+excerpt: "Machine learning project focused on detecting anomalous healthcare claims and improving fraud detection recall."
+
+header:
+  teaser: /assets/images/Healthcare fruad illustration.png
 ---
 
 # Catching Fraud in the Healthcare System
 
-<img src="/assets/images/Healthcare fruad illustration.png" width="600">
-
-*Catching Healthcare Fraud: A Data-Science Walk-Through*
+<img src="/assets/images/Healthcare fruad illustration.png" style="width:100%;">
+<p style="font-size: 0.85em; text-align: left;">
+Catching Healthcare Fraud: A Data-Science Walk-Through
+</p>
 
 
 **Posted by Tomer Choresh** <br> 
 *Published on: May 1, 2025*
-
 
 ---
 
@@ -31,7 +36,7 @@ As a data enthusiast, I wanted to work on a real-world problem with a clear impa
 
 I set out to see how far a simple Logistic Regression model could go in spotting fraudulent providers in this dataset. I handled the full pipeline for this project: data cleaning, EDA, feature engineering, modeling, evaluation and visualization. You are invited to read through my process and explore the insights I gained along the way.
 
----
+<!-- --- -->
 
 ## Data and Tools
 
@@ -54,7 +59,7 @@ For this project, I used Python and its tools and libraries. Specifically, I use
 
 All code and commits are available in my [GitHub repository](https://github.com/ChTomer/MyCapstone).
 
----
+<!-- --- -->
 
 ## Exploratory Data Analysis
 
@@ -65,9 +70,10 @@ Before diving into the dataset, it's important to highlight a key point about my
 
 The label breakdown is _90.65% non-fraud vs 9.35% fraud_, matching the DOJ estimate.
 
-<img src="/assets/images/prop fraud.png" width="600">
+<img src="/assets/images/prop fraud.png" style="width:50%;">
+<p style="font-size: 0.85em; text-align: left;">
+Fraudulent providers 9.35%, non-fraud 90.65%.</p>
 
-*Fraudulent providers 9.35%, non-fraud 90.65%.*
 
 Although fraudulent providers make up only 9.35% of the list, they account *over half of the total reimbursements*, as shown in the table below.
 
@@ -79,7 +85,7 @@ Although fraudulent providers make up only 9.35% of the list, they account *over
 
 > *Takeaway: a small fraction of providers is responsible for the majority of billed dollars - an early hint that provider-level features will matter.*
 
----
+<!-- --- -->
 
 ## Feature Engineering
 
@@ -101,11 +107,14 @@ These were calculated separately for inpatient (IP) and outpatient (OP) data, wh
 
 The chart below compares the *average claim duration* for fraud vs non-fraud providers, split by IP and OP. In both IP and OP sets, fraudulent providers bill for noticeably longer sessions.
 
-<img src="/assets/images/avg dur tre double.png" width="600">
+<img src="/assets/images/avg dur tre double.png" style="width:100%;">
+<p style="font-size: 0.85em; text-align: left;">
+Average claim duration by fraud status (IP and OP).
+</p>
 
-*Average claim duration by fraud status (IP and OP).*
 
----
+
+<!-- --- -->
 
 # Modeling
 
@@ -121,11 +130,13 @@ I began with baseline Logistic Regression (`scikit-learn` default). The accuracy
 - F1 Score: 0.51
 - AUC LR Model: [0.9239]
   
-<img src="/assets/images/LR 1.png" width="600">
+<img src="/assets/images/LR 1.png" style="width:100%;">
+<p style="font-size: 0.85em; text-align: left;">
+Confusion matrix and ROC curve for baseline Logistic Regression.
+</p>
 
-*Confusion matrix and ROC curve for baseline Logistic Regression.*
 
----
+<!-- --- -->
 
 ## LR + Hyperparameter Tuning Using GridSearchCV - Take 2
 
@@ -143,11 +154,14 @@ I ran a `GridSearchCV` over regularization strength (`C`), penalty type, and sol
 
 I got better results for the Precision, but recall dropped by 0.10 points. As a result, 76 of 105 fraudulent providers still slip past from the true value. At this point, I noticed something odd: no matter what I tried, accuracy hovered around 90%. Then it struck me that the data were about 90% non-fraud. That’s why the model could predict 'clean' every time and still achieve a high accuracy score.
 
-<img src="/assets/images/GSCV2.png" width="600">
+<img src="/assets/images/GSCV2.png" style="width:100%;">
+<p style="font-size: 0.85em; text-align: left;">
+Confusion Matrix and ROC curve for Logistic Regression after hyper-parameter tuning with GridSearchCV.
+</p>
 
-*Confusion Matrix and ROC curve for Logistic Regression after hyper-parameter tuning with GridSearchCV.*
 
----
+
+<!-- --- -->
 
 ## LR + SMOTE - Take 3
 
@@ -162,10 +176,13 @@ The SMOTE method generates synthetic data for the minority class until we get th
 | Non-fraud (0) | 3,923 | 3,923 |
 | Fraud (1) | 405 | 3,923 |
 
-<img src="/assets/images/smote_demo.gif" width="600">
+<img src="/assets/images/smote_demo.gif" style="width:100%;">
+<p style="font-size: 0.85em; text-align: left;">
+Illustration of SMOTE on a graph.
+</p>
 
---- 
-*Illustration of SMOTE on a graph.*
+<!-- ---  -->
+
 
 Running SMOTE with Logistic Regression gives me the following results:
 
@@ -175,9 +192,11 @@ Running SMOTE with Logistic Regression gives me the following results:
 - <mark>F1 Score: 0.61</mark>
 - <mark>AUC with the SMOTE Model: [0.9611]</mark>
 
-<img src="/assets/images/SMOTE3.png" width="600">
+<img src="/assets/images/SMOTE3.png" style="width:100%;">
+<p style="font-size: 0.85em; text-align: left;">
+Confusion Matrix and ROC curve for Logistic Regression with SMOTE (best results).
+</p>
 
-*Confusion Matrix and ROC curve for Logistic Regression with SMOTE (best results).*
 
 This time I was much happier with my results! Finally, the recall increased to 0.86, and the ROC score increased to 0.9611. Precision fell to 0.48. Even though we had some more false alarms, it was worth it to catch most fraud.
 
@@ -191,7 +210,7 @@ In summary, this table gives a short view of the three model performances:
 | GridSearch LR | 0.92 | 0.81 | 0.28 | 0.41 | 0.926 | No real lift |
 | <font color="red"> **SMOTE + LR** </font> | <font color="red">0.90</font> | <font color="red">0.48</font> | <font color="red">0.86</font> | <font color="red">0.61</font> | <font color="red">0.961</font> | <font color="red">Best ROC-AUC</font> |
 
----
+<!-- --- -->
 
 ## Key Findings
 
@@ -199,7 +218,7 @@ In summary, this table gives a short view of the three model performances:
 - Custom features: improved model performance.
 - SMOTE + LR: great combination for imbalanced data.
 
----
+<!-- --- -->
 
 ## Summary
 
