@@ -15,8 +15,9 @@ classes: wide
 I’m a Data Analyst based in Israel with a background in analytics, machine learning, and data visualization.
 
 Featured Projects:
-- Broadway Revenue Analysis
+- Olist Data Warehouse
 - Healthcare Fraud Detection
+- Broadway Revenue Analysis
 - Formula 1 Analytics
 
 I work with Python, SQL, R, and BI tools to analyze complex datasets, build predictive models, and create data-driven insights through analytics and visualization projects.

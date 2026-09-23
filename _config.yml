@@ -60,10 +60,7 @@ author:
   name   : "Tomer Choresh"
   avatar : "/assets/images/linkedin-image.png"
   bio    : |
-            Data analyst based in Israel 
-            with hands-on experience in Python, 
-            SQL, R, dashboard development, 
-            and machine learning projects.
+            Data analyst based in Israel with hands-on experience in Python, SQL, R, dashboard development, and machine learning projects.
   links:
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
